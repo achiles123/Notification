@@ -1,0 +1,14 @@
+C:\Users\bsd\Desktop\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.deps.json
+C:\Users\bsd\Desktop\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.runtimeconfig.json
+C:\Users\bsd\Desktop\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.runtimeconfig.dev.json
+C:\Users\bsd\Desktop\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.dll
+C:\Users\bsd\Desktop\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.pdb
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.csprojAssemblyReference.cache
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.csproj.CoreCompileInputs.cache
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.RazorAssemblyInfo.cache
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.RazorAssemblyInfo.cs
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.AssemblyInfoInputs.cache
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.AssemblyInfo.cs
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.RazorTargetAssemblyInfo.cache
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.dll
+C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.pdb
