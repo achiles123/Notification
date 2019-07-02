@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Notification.Hubs;
+using Notification.Models;
 
 namespace Notification.Controllers
 {
@@ -13,21 +14,31 @@ namespace Notification.Controllers
     public class NotificationsController : ControllerBase
     {
         IHubContext<NotificationHub> _hubContext;
-        public  NotificationsController(IHubContext<NotificationHub> hubContext) => _hubContext = hubContext;
+        ModelService<Room> _sevice;
 
-        [Route("notification")]
-        [HttpGet]
-        public IActionResult index()
+        public NotificationsController(IHubContext<NotificationHub> hubContext, IMongoDb service)
         {
-            _hubContext.Clients.All.SendAsync("Notification", "ok");
-            return Ok("ok");
+            _hubContext = hubContext;
+            _sevice = new ModelService<Room>(service);
         }
+
+        //[Route("notification")]
+        //[HttpGet]
+        //public IActionResult index()
+        //{
+        //    _hubContext.Clients.All.SendAsync("Notification", new object[] { "ok", "ok" });
+        //    return Ok("ok");
+        //}
 
         [Route("test")]
         [HttpGet]
         public IActionResult test()
         {
-            //_hubContext.Clients.All.SendAsync("Notification", "ok");
+            
+            _hubContext.Clients.All.SendAsync("Notification", new List<string>() {"admin", Request.Query["message"] });
+            _sevice.Create(new Room() {
+                Name = "abc",
+            });
             return Ok("ok");
         }
 

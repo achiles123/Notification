@@ -8,9 +8,9 @@ namespace Notification.Hubs
 {
     public class NotificationHub:Hub
     {
-        public async Task SendMessage(String message)
+        public void SendMessage(String name, String message)
         {
-            await Clients.All.SendAsync("Notification", message);
+            Clients.All.SendAsync("Notification", new List<string>() { name, message });
         }
     }
 }
