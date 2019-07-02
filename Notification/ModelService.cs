@@ -10,15 +10,19 @@ namespace Notification
     public class ModelService<T> where T:Model
     {
         IMongoCollection<T> collection;
-        T model;
+        MongoClient client;
+        IMongoDatabase database;
+        public T model;
 
         public ModelService(IMongoDb settings)
         {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
+            client = new MongoClient(settings.ConnectionString);
+            database = client.GetDatabase(settings.DatabaseName);
             model = (T)Activator.CreateInstance(typeof(T));
-            collection = database.GetCollection<T>(model.CollectionName);
+            collection = database.GetCollection<T>(model.GetCollectionName());
         }
+
+      
 
         public List<T> Get() =>
             collection.Find(f => true).ToList();

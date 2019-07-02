@@ -37,9 +37,9 @@ namespace Notification.Controllers
             
             _hubContext.Clients.All.SendAsync("Notification", new List<string>() {"admin", Request.Query["message"] });
             _sevice.Create(new Room() {
-                Name = "abc",
+                Name = "abcd",
             });
-            return Ok("ok");
+            return Ok(_sevice.Get());
         }
 
     }

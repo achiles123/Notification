@@ -9,7 +9,7 @@ namespace Notification.Models
 {
     public class Model
     {
-        public virtual string CollectionName { get; }
+        protected string CollectionName;
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }

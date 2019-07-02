@@ -12,3 +12,17 @@ C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notificat
 C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.RazorTargetAssemblyInfo.cache
 C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.dll
 C:\Users\bsd\Desktop\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.pdb
+D:\project\flutter\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.deps.json
+D:\project\flutter\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.runtimeconfig.json
+D:\project\flutter\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.runtimeconfig.dev.json
+D:\project\flutter\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.dll
+D:\project\flutter\Notification\Notification\bin\Debug\netcoreapp2.2\Notification.pdb
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.csproj.CoreCompileInputs.cache
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.RazorAssemblyInfo.cache
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.RazorAssemblyInfo.cs
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.AssemblyInfoInputs.cache
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.AssemblyInfo.cs
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.RazorTargetAssemblyInfo.cache
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.dll
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.pdb
+D:\project\flutter\Notification\Notification\obj\Debug\netcoreapp2.2\Notification.csprojAssemblyReference.cache

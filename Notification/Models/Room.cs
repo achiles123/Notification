@@ -9,8 +9,13 @@ namespace Notification.Models
 {
     public class Room:Model
     {
-        public new string CollectionName { get => "room"; }
+        public Room()
+        {
+            CollectionName = "room";
+        }
+        [BsonElement("name")]
         public string Name { get; set; }
+        [BsonElement("status")]
         public int Status { get; set; } = 1;
     }
 }
