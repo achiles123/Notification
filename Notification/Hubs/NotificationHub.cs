@@ -8,9 +8,14 @@ namespace Notification.Hubs
 {
     public class NotificationHub:Hub
     {
+        public void SendNotification(String name, String message)
+        {
+            Clients.All.SendAsync("onNotification", new List<string>() { name, message });
+        }
+
         public void SendMessage(String name, String message)
         {
-            Clients.All.SendAsync("Notification", new List<string>() { name, message });
+            Clients.All.SendAsync("onMessage", new List<string>() { name, message });
         }
     }
 }
