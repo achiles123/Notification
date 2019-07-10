@@ -44,10 +44,10 @@ namespace Notification.Controllers
         [HttpGet]
         public IActionResult SendMessage([FromQuery] ChatModel chatRequest)
         {
-
+            chatRequest.dateCreate = DateTime.Now;
             _hubContext.Clients.All.SendAsync("onMessage", new List<ChatModel>() { chatRequest });
 
-            return Ok(_sevice.Get());
+            return Ok(chatRequest);
         }
 
     }
