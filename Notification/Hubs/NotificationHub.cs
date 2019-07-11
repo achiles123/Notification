@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Notification.Models;
+using Newtonsoft.Json;
 
 namespace Notification.Hubs
 {
@@ -14,9 +15,10 @@ namespace Notification.Hubs
             Clients.All.SendAsync("onNotification", new List<string>() { name, message });
         }
 
-        public void SendMessage(ChatModel chat)
+        public void SendMessage(string chat)
         {
-            Clients.All.SendAsync("onMessage", new List<ChatModel>() { chat });
+            ChatModel obj = JsonConvert.DeserializeObject<ChatModel>(chat);
+            Clients.All.SendAsync("onMessage", new List<ChatModel>() { obj });
         }
     }
 }
