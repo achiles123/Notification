@@ -14,12 +14,12 @@ namespace Notification.Controllers
     public class NotificationsController : ControllerBase
     {
         IHubContext<NotificationHub> _hubContext;
-        ModelService<Room> _sevice;
+        ModelService<RoomModel> _sevice;
 
         public NotificationsController(IHubContext<NotificationHub> hubContext, IMongoDb service)
         {
             _hubContext = hubContext;
-            _sevice = new ModelService<Room>(service);
+            _sevice = new ModelService<RoomModel>(service);
         }
 
         //[Route("notification")]
@@ -35,11 +35,19 @@ namespace Notification.Controllers
         public IActionResult test()
         {
             
-            _hubContext.Clients.All.SendAsync("Notification", new List<string>() {"admin", Request.Query["message"] });
-            _sevice.Create(new Room() {
-                Name = "abcd",
-            });
+            _hubContext.Clients.All.SendAsync("onNotification", new List<string>() {"admin", Request.Query["message"] });
+
             return Ok(_sevice.Get());
+        }
+
+        [Route("send-message")]
+        [HttpGet]
+        public IActionResult SendMessage([FromQuery] ChatModel chatRequest)
+        {
+            chatRequest.dateCreate = DateTime.Now;
+            _hubContext.Clients.All.SendAsync("onMessage", new List<ChatModel>() { chatRequest });
+
+            return Ok(chatRequest);
         }
 
     }

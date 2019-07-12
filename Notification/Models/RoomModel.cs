@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Notification.Models
 {
-    public class Room:Model
+    public class RoomModel:Model
     {
-        public Room()
+        public RoomModel()
         {
             CollectionName = "room";
         }
