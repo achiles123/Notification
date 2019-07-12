@@ -44,7 +44,10 @@ namespace Notification.Controllers
         [HttpGet]
         public IActionResult SendMessage([FromQuery] ChatModel chatRequest)
         {
-            chatRequest.dateCreate = DateTime.Now;
+            chatRequest.userId = "0";
+            chatRequest.messageType = 2;
+            chatRequest.userName = "Admin";
+            chatRequest.dateCreate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Minute);
             _hubContext.Clients.All.SendAsync("onMessage", new List<ChatModel>() { chatRequest });
 
             return Ok(chatRequest);
